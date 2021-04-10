@@ -1,46 +1,18 @@
 <?php
 
 /**
- * Global Configuration Override
- *
- * You can use this file for overriding configuration values from modules, etc.
- * You would place values in here that are agnostic to the environment and not
- * sensitive to security.
- *
- * NOTE: In practice, this file will typically be INCLUDED in your source
- * control, so do not include passwords or other sensitive information in this
- * file.
+ * @see       https://github.com/laminas-api-tools/api-tools-skeleton for the canonical source repository
+ * @copyright https://github.com/laminas-api-tools/api-tools-skeleton/blob/master/COPYRIGHT.md
+ * @license   https://github.com/laminas-api-tools/api-tools-skeleton/blob/master/LICENSE.md New BSD License
  */
 
 return [
-    'doctrine' => [
-        'migrations_configuration' => [
-            'orm_default' => [
-                'directory' => 'data/Migrations/',
-                'name'      => 'Doctrine Database Migrations',
-                'namespace' => 'Migrations',
-                'table'     => 'migrations',
-            ],
+    'api-tools-content-negotiation' => [
+        'selectors' => [],
+    ],
+    'db'                            => [
+        'adapters' => [
+            'dummy' => [],
         ],
-    ],
-    'reinfi.dependencyInjection' => [
-        'cache'         => Memory::class,
-        'cache_options' => [],
-        'cache_plugins' => [],
-    ],
-    'session_config' => [
-        // session will expire after 8 hours
-        'cookie_lifetime' => 60 * 60 * 8,
-        // Session data will be stored on server maximum for 30 days.
-        'gc_maxlifetime' => 60 * 60 * 24 * 31
-    ],
-    'session_manager' => [
-        'validators' => [
-            RemoteAddr::class,
-            HttpUserAgent::class
-        ]
-    ],
-    'session_storage' => [
-        'type' => SessionArrayStorage::class
     ],
 ];

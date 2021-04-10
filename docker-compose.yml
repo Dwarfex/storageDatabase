@@ -16,7 +16,7 @@ services:
       context: ./docker-config
       dockerfile: Dockerfile-fpm
     stdin_open: true
-    command: /docker/wait-for-it.sh docker-mysql:3306 -- /docker/wait-for-it.sh redis:6379 -- /docker/setup.sh
+    command: /docker/setup.sh
     tty: true
     volumes:
       - ./app/:/www/app

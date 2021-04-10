@@ -1,7 +1,8 @@
+!data/cache/.gitkeep
 .vagrant/
-vendor/
+/phpunit.xml
+/vendor/
 config/development.config.php
 data/cache/*
-!data/cache/.gitkeep
-phpunit.xml
 .phpunit.result.cache
+.phpcs-cache
