@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6f7556e68eb9af38724071c337fae19c",
+    "content-hash": "fae8c6e810333fe2be6f31a414e7ead6",
     "packages": [
         {
             "name": "brick/varexporter",
@@ -2877,6 +2877,44 @@
                 "rest"
             ],
             "time": "2016-10-28T16:06:13+00:00"
+        },
+        {
+            "name": "somecoding/ordb-models",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/somecoding/ordb-models.git",
+                "reference": "952e5a85059e2c219a900b031b1c1675127ac8e6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/somecoding/ordb-models/zipball/952e5a85059e2c219a900b031b1c1675127ac8e6",
+                "reference": "952e5a85059e2c219a900b031b1c1675127ac8e6",
+                "shasum": ""
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "OrdbModels\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dwarfex - SomeCoding",
+                    "email": "dwarfex@somecoding.de"
+                }
+            ],
+            "description": "This package contains the Models for the Open Recipe Database. These are Models related to Recipes.",
+            "support": {
+                "issues": "https://github.com/somecoding/ordb-models/issues",
+                "source": "https://github.com/somecoding/ordb-models/tree/main"
+            },
+            "time": "2021-04-10T14:34:13+00:00"
         },
         {
             "name": "webimpress/safe-writer",
@@ -6716,13 +6754,12 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "somecoding/ordb-models": 20,
         "roave/security-advisories": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": {
-        "php": "^7.3"
-    },
+    "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "1.1.0"
+    "plugin-api-version": "2.0.0"
 }
