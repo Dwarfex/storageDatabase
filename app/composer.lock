@@ -1977,16 +1977,16 @@
         },
         {
             "name": "laminas/laminas-modulemanager",
-            "version": "2.10.1",
+            "version": "2.10.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas/laminas-modulemanager.git",
-                "reference": "637aaaf2c85d13694b096e253e5884653f93bb92"
+                "reference": "2068e0b300e87e139112016a6025be341ceaaf33"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-modulemanager/zipball/637aaaf2c85d13694b096e253e5884653f93bb92",
-                "reference": "637aaaf2c85d13694b096e253e5884653f93bb92",
+                "url": "https://api.github.com/repos/laminas/laminas-modulemanager/zipball/2068e0b300e87e139112016a6025be341ceaaf33",
+                "reference": "2068e0b300e87e139112016a6025be341ceaaf33",
                 "shasum": ""
             },
             "require": {
@@ -2046,7 +2046,7 @@
                     "type": "community_bridge"
                 }
             ],
-            "time": "2020-09-01T22:26:46+00:00"
+            "time": "2021-04-13T20:11:28+00:00"
         },
         {
             "name": "laminas/laminas-mvc",
@@ -4104,16 +4104,16 @@
         },
         {
             "name": "laminas/laminas-developer-tools",
-            "version": "2.1.0",
+            "version": "2.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas/laminas-developer-tools.git",
-                "reference": "e8c923c652748957fe959bcad52b4632806f8086"
+                "reference": "8d9e152e0791fe577e1d0fb63c6a973558f36013"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-developer-tools/zipball/e8c923c652748957fe959bcad52b4632806f8086",
-                "reference": "e8c923c652748957fe959bcad52b4632806f8086",
+                "url": "https://api.github.com/repos/laminas/laminas-developer-tools/zipball/8d9e152e0791fe577e1d0fb63c6a973558f36013",
+                "reference": "8d9e152e0791fe577e1d0fb63c6a973558f36013",
                 "shasum": ""
             },
             "require": {
@@ -4179,7 +4179,7 @@
                     "type": "community_bridge"
                 }
             ],
-            "time": "2020-11-02T03:36:33+00:00"
+            "time": "2021-04-13T20:07:35+00:00"
         },
         {
             "name": "laminas/laminas-dom",
