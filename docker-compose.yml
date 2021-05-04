@@ -30,7 +30,7 @@ services:
     container_name: composer
     restart: 'no'
     image: composer/composer:2
-    command: install --ignore-platform-reqs --prefer-source --no-plugins --no-scripts --optimize-autoloader
+    command: install --ignore-platform-reqs --prefer-source --no-interaction --optimize-autoloader
     volumes:
       - ./app/:/app
   mysql:
