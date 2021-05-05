@@ -1,0 +1,384 @@
+openapi: 3.0.0
+info:
+  title: Storage
+  version: "1"
+tags:
+  - name: ItemCategory
+  - name: ItemDefinition
+  - name: Item
+paths:
+  /item-category:
+    get:
+      tags:
+        - ItemCategory
+      responses:
+        "200":
+          description: OK
+        "406":
+          description: Not Acceptable
+        "415":
+          description: Unsupported Media Type
+    post:
+      tags:
+        - ItemCategory
+      requestBody:
+        $ref: "#/components/requestBodies/ItemCategory"
+      responses:
+        "201":
+          description: Created
+        "400":
+          description: Client Error
+        "406":
+          description: Not Acceptable
+        "415":
+          description: Unsupported Media Type
+        "422":
+          description: Unprocessable Entity
+  "/item-category/{item_category_id}":
+    get:
+      tags:
+        - ItemCategory
+      parameters:
+        - in: path
+          name: item_category_id
+          description: URL parameter item_category_id
+          required: true
+          schema:
+            type: string
+            minimum: 0
+            maximum: 1
+      responses:
+        "200":
+          description: OK
+        "404":
+          description: Not Found
+        "406":
+          description: Not Acceptable
+        "415":
+          description: Unsupported Media Type
+    patch:
+      tags:
+        - ItemCategory
+      parameters:
+        - in: path
+          name: item_category_id
+          description: URL parameter item_category_id
+          required: true
+          schema:
+            type: string
+            minimum: 0
+            maximum: 1
+      requestBody:
+        $ref: "#/components/requestBodies/ItemCategory"
+      responses:
+        "200":
+          description: OK
+        "400":
+          description: Client Error
+        "404":
+          description: Not Found
+        "406":
+          description: Not Acceptable
+        "415":
+          description: Unsupported Media Type
+        "422":
+          description: Unprocessable Entity
+    put:
+      tags:
+        - ItemCategory
+      parameters:
+        - in: path
+          name: item_category_id
+          description: URL parameter item_category_id
+          required: true
+          schema:
+            type: string
+            minimum: 0
+            maximum: 1
+      requestBody:
+        $ref: "#/components/requestBodies/ItemCategory"
+      responses:
+        "200":
+          description: OK
+        "400":
+          description: Client Error
+        "404":
+          description: Not Found
+        "406":
+          description: Not Acceptable
+        "415":
+          description: Unsupported Media Type
+        "422":
+          description: Unprocessable Entity
+    delete:
+      tags:
+        - ItemCategory
+      parameters:
+        - in: path
+          name: item_category_id
+          description: URL parameter item_category_id
+          required: true
+          schema:
+            type: string
+            minimum: 0
+            maximum: 1
+      responses:
+        "204":
+          description: No Content
+        "404":
+          description: Not Found
+        "406":
+          description: Not Acceptable
+        "415":
+          description: Unsupported Media Type
+  /item-definition:
+    get:
+      tags:
+        - ItemDefinition
+      responses:
+        "200":
+          description: OK
+        "406":
+          description: Not Acceptable
+        "415":
+          description: Unsupported Media Type
+    post:
+      tags:
+        - ItemDefinition
+      requestBody:
+        $ref: "#/components/requestBodies/ItemDefinition"
+      responses:
+        "201":
+          description: Created
+        "406":
+          description: Not Acceptable
+        "415":
+          description: Unsupported Media Type
+  "/item-definition/{item_definition_id}":
+    get:
+      tags:
+        - ItemDefinition
+      parameters:
+        - in: path
+          name: item_definition_id
+          description: URL parameter item_definition_id
+          required: true
+          schema:
+            type: string
+            minimum: 0
+            maximum: 1
+      responses:
+        "200":
+          description: OK
+        "404":
+          description: Not Found
+        "406":
+          description: Not Acceptable
+        "415":
+          description: Unsupported Media Type
+    patch:
+      tags:
+        - ItemDefinition
+      parameters:
+        - in: path
+          name: item_definition_id
+          description: URL parameter item_definition_id
+          required: true
+          schema:
+            type: string
+            minimum: 0
+            maximum: 1
+      requestBody:
+        $ref: "#/components/requestBodies/ItemDefinition"
+      responses:
+        "200":
+          description: OK
+        "404":
+          description: Not Found
+        "406":
+          description: Not Acceptable
+        "415":
+          description: Unsupported Media Type
+    put:
+      tags:
+        - ItemDefinition
+      parameters:
+        - in: path
+          name: item_definition_id
+          description: URL parameter item_definition_id
+          required: true
+          schema:
+            type: string
+            minimum: 0
+            maximum: 1
+      requestBody:
+        $ref: "#/components/requestBodies/ItemDefinition"
+      responses:
+        "200":
+          description: OK
+        "404":
+          description: Not Found
+        "406":
+          description: Not Acceptable
+        "415":
+          description: Unsupported Media Type
+    delete:
+      tags:
+        - ItemDefinition
+      parameters:
+        - in: path
+          name: item_definition_id
+          description: URL parameter item_definition_id
+          required: true
+          schema:
+            type: string
+            minimum: 0
+            maximum: 1
+      responses:
+        "204":
+          description: No Content
+        "404":
+          description: Not Found
+        "406":
+          description: Not Acceptable
+        "415":
+          description: Unsupported Media Type
+  /item:
+    get:
+      tags:
+        - Item
+      responses:
+        "200":
+          description: OK
+        "406":
+          description: Not Acceptable
+        "415":
+          description: Unsupported Media Type
+    post:
+      tags:
+        - Item
+      requestBody:
+        $ref: "#/components/requestBodies/Item"
+      responses:
+        "201":
+          description: Created
+        "406":
+          description: Not Acceptable
+        "415":
+          description: Unsupported Media Type
+  "/item/{item_id}":
+    get:
+      tags:
+        - Item
+      parameters:
+        - in: path
+          name: item_id
+          description: URL parameter item_id
+          required: true
+          schema:
+            type: string
+            minimum: 0
+            maximum: 1
+      responses:
+        "200":
+          description: OK
+        "404":
+          description: Not Found
+        "406":
+          description: Not Acceptable
+        "415":
+          description: Unsupported Media Type
+    patch:
+      tags:
+        - Item
+      parameters:
+        - in: path
+          name: item_id
+          description: URL parameter item_id
+          required: true
+          schema:
+            type: string
+            minimum: 0
+            maximum: 1
+      requestBody:
+        $ref: "#/components/requestBodies/Item"
+      responses:
+        "200":
+          description: OK
+        "404":
+          description: Not Found
+        "406":
+          description: Not Acceptable
+        "415":
+          description: Unsupported Media Type
+    put:
+      tags:
+        - Item
+      parameters:
+        - in: path
+          name: item_id
+          description: URL parameter item_id
+          required: true
+          schema:
+            type: string
+            minimum: 0
+            maximum: 1
+      requestBody:
+        $ref: "#/components/requestBodies/Item"
+      responses:
+        "200":
+          description: OK
+        "404":
+          description: Not Found
+        "406":
+          description: Not Acceptable
+        "415":
+          description: Unsupported Media Type
+    delete:
+      tags:
+        - Item
+      parameters:
+        - in: path
+          name: item_id
+          description: URL parameter item_id
+          required: true
+          schema:
+            type: string
+            minimum: 0
+            maximum: 1
+      responses:
+        "204":
+          description: No Content
+        "404":
+          description: Not Found
+        "406":
+          description: Not Acceptable
+        "415":
+          description: Unsupported Media Type
+components:
+  requestBodies:
+    ItemDefinition:
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ItemDefinition"
+      required: true
+    ItemCategory:
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ItemCategory"
+      required: true
+    Item:
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Item"
+      required: true
+  schemas:
+    ItemCategory:
+      type: object
+    ItemDefinition:
+      type: object
+    Item:
+      type: object

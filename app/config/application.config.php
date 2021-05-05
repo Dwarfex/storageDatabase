@@ -6,6 +6,8 @@
  * @license   https://github.com/laminas-api-tools/api-tools-skeleton/blob/master/LICENSE.md New BSD License
  */
 
+use Application\Cache\Factory\RedisFactory;
+
 return [
     // Retrieve the list of modules for this application.
     'modules' => include __DIR__ . '/modules.config.php',
@@ -26,5 +28,10 @@ return [
         'module_map_cache_key'     => 'application.module.cache',
         'module_map_cache_enabled' => true,
         'cache_dir'                => 'data/cache/',
+    ],
+    'service_manager'         => [
+        'factories' => [
+            'RedisCache' => RedisFactory::class,
+        ],
     ],
 ];

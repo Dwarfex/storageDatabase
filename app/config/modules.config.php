@@ -30,6 +30,8 @@ return [
     'Laminas\\ApiTools\\Rpc',
     'Laminas\\ApiTools\\Versioning',
     'Laminas\\ApiTools\\Documentation\\Swagger',
+    'DoctrineModule',
+    'DoctrineORMModule',
     'Application',
     'Storage',
 ];

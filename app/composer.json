@@ -29,15 +29,24 @@
         }
     ],
     "require": {
-        "laminas-api-tools/api-tools-documentation-swagger": "dev-patch-1",
-        "laminas/laminas-mvc-console": "^1.3",
-        "reinfi/zf-dependency-injection": "^4.1",
+        "php": "^7.4 || ^8.0",
+        "ext-redis": "*",
+        "doctrine/collections": "^1.6",
+        "doctrine/doctrine-module": "4.1.1",
+        "doctrine/doctrine-orm-module": "^4.0",
+        "doctrine/migrations": "^3.1",
         "enlitepro/enlite-monolog": "^2.5",
+        "fakerphp/faker": "^1.14",
+        "guzzlehttp/guzzle": "^7.3",
         "laminas-api-tools/api-tools": "^1.4",
         "laminas-api-tools/api-tools-documentation": "^1.3",
+        "laminas-api-tools/api-tools-documentation-swagger": "dev-patch-1",
         "laminas/laminas-component-installer": "^2.1.1",
         "laminas/laminas-development-mode": "^3.2",
+        "laminas/laminas-mvc-console": "^1.3",
         "laminas/laminas-zendframework-bridge": "^1.0",
+        "predis/predis": "^1.1",
+        "reinfi/zf-dependency-injection": "^4.1",
         "somecoding/ordb-models": "dev-main"
     },
     "require-dev": {

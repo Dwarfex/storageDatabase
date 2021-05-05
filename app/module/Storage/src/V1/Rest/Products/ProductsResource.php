@@ -1,15 +1,25 @@
 <?php
+
 namespace Storage\V1\Rest\Products;
 
+use Doctrine\ORM\EntityManager;
+use Doctrine\ORM\EntityRepository;
 use Laminas\ApiTools\ApiProblem\ApiProblem;
 use Laminas\ApiTools\Rest\AbstractResourceListener;
 
 class ProductsResource extends AbstractResourceListener
 {
+
+    public function __construct(EntityManager $entityManager, EntityRepository $productRepository)
+    {
+        $this->productRepository = $productRepository;
+        $this->entityManager     = $entityManager;
+    }
+
     /**
      * Create a resource
      *
-     * @param  mixed $data
+     * @param mixed $data
      * @return ApiProblem|mixed
      */
     public function create($data)
@@ -20,7 +30,7 @@ class ProductsResource extends AbstractResourceListener
     /**
      * Delete a resource
      *
-     * @param  mixed $id
+     * @param mixed $id
      * @return ApiProblem|mixed
      */
     public function delete($id)
@@ -31,7 +41,7 @@ class ProductsResource extends AbstractResourceListener
     /**
      * Delete a collection, or members of a collection
      *
-     * @param  mixed $data
+     * @param mixed $data
      * @return ApiProblem|mixed
      */
     public function deleteList($data)
@@ -42,30 +52,30 @@ class ProductsResource extends AbstractResourceListener
     /**
      * Fetch a resource
      *
-     * @param  mixed $id
+     * @param mixed $id
      * @return ApiProblem|mixed
      */
     public function fetch($id)
     {
-        return new ApiProblem(405, 'The GET method has not been defined for individual resources');
+        return $this->productRepository->find($id);
     }
 
     /**
      * Fetch all or a subset of resources
      *
-     * @param  array $params
+     * @param array $params
      * @return ApiProblem|mixed
      */
     public function fetchAll($params = [])
     {
-        return new ApiProblem(405, 'The GET method has not been defined for collections');
+        return $this->productRepository->findAll();
     }
 
     /**
      * Patch (partial in-place update) a resource
      *
-     * @param  mixed $id
-     * @param  mixed $data
+     * @param mixed $id
+     * @param mixed $data
      * @return ApiProblem|mixed
      */
     public function patch($id, $data)
@@ -76,7 +86,7 @@ class ProductsResource extends AbstractResourceListener
     /**
      * Patch (partial in-place update) a collection or members of a collection
      *
-     * @param  mixed $data
+     * @param mixed $data
      * @return ApiProblem|mixed
      */
     public function patchList($data)
@@ -87,7 +97,7 @@ class ProductsResource extends AbstractResourceListener
     /**
      * Replace a collection or members of a collection
      *
-     * @param  mixed $data
+     * @param mixed $data
      * @return ApiProblem|mixed
      */
     public function replaceList($data)
@@ -98,8 +108,8 @@ class ProductsResource extends AbstractResourceListener
     /**
      * Update a resource
      *
-     * @param  mixed $id
-     * @param  mixed $data
+     * @param mixed $id
+     * @param mixed $data
      * @return ApiProblem|mixed
      */
     public function update($id, $data)
