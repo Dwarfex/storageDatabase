@@ -24,8 +24,6 @@ services:
       - ./docker/:/docker
     environment:
       - APPLICATION_ENV=development
-    extra_hosts:
-      dehrg-adds01.nsf.org: 10.226.0.6
   composer:
     container_name: composer
     restart: 'no'
