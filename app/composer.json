@@ -50,7 +50,7 @@
         "somecoding/ordb-models": "dev-main"
     },
     "require-dev": {
-        "laminas-api-tools/api-tools-admin": "^1.6",
+        "laminas-api-tools/api-tools-admin": "^2.0",
         "laminas-api-tools/api-tools-asset-manager": "^1.2",
         "laminas/laminas-coding-standard": "^2.1",
         "laminas/laminas-composer-autoloading": "^3.0",
